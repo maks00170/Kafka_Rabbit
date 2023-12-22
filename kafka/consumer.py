@@ -12,7 +12,7 @@ def main(group_id):
 
 
 if __name__ == "__main__":
-    group_id = None
+    group_id = os.environ.get('CONSUMER_GROUP', 'default-group')
     try:
         main(group_id)
     except KeyboardInterrupt:
